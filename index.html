@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste de digitação</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>Digite rápido</h1>
+      <div class="levels" role="group" aria-label="Dificuldade">
+        <button class="level" data-level="easy" aria-pressed="true">Fácil</button>
+        <button class="level" data-level="medium" aria-pressed="false">Médio</button>
+        <button class="level" data-level="hard" aria-pressed="false">Difícil</button>
+      </div>
+    </header>
+
+    <dl class="live">
+      <div><dt>Tempo</dt><dd id="time">30</dd></div>
+      <div><dt>Palavras por minuto</dt><dd id="wpm">0</dd></div>
+      <div><dt>Precisão</dt><dd id="acc">100%</dd></div>
+    </dl>
+
+    <div id="text" class="text unfocused" aria-label="Texto para digitar"></div>
+    <input id="input" class="hidden-input" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Digite o texto aqui">
+    <p id="hint" class="hint">Clique no texto e comece a digitar. O tempo começa na primeira tecla.</p>
+
+    <button id="restart" class="btn">Recomeçar</button>
+
+    <section id="result" class="result" hidden aria-live="polite">
+      <h2 id="result-title">Tempo esgotado!</h2>
+      <p id="result-text"></p>
+    </section>
+
+    <section class="ranking" aria-labelledby="rank-title">
+      <h2 id="rank-title">Seus melhores resultados</h2>
+      <ol id="ranking"></ol>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
