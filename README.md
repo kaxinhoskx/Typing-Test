@@ -4,7 +4,7 @@ Teste de digitação de 30 segundos com três níveis de dificuldade, cálculo d
 
 🔗 **Demo:** https://kaxinhoskx.github.io/Typing-Test/
 
-![Print do Teste de Digitação](prints/app.png)
+![Print do Teste de Digitação](print/app.png)
 
 ## ✨ Funcionalidades
 
